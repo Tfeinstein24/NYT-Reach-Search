@@ -65,12 +65,9 @@ var Main = React.createClass({
     return (
       <div className="container">
         <div className="row">
-          <div className="jumbotron">
-            <h2 className="text-center">Address Finder!!</h2>
-            <p className="text-center">
-              <em>Enter a landmark to search for its exact address (ex: "Eiffel Tower").</em>
-            </p>
-          </div>
+          <div class="jumbotron">
+		<h1 class="text-center"><strong><i class="fa fa-newspaper-o"></i> New York Times Search</strong></h1>
+	        </div>
 
           <div className="col-md-6">
 
