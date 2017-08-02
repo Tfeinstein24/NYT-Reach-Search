@@ -3,6 +3,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var path = require("path");
 
 // Require History Schema
 var History = require("./models/History");
@@ -19,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')))
 
 // -------------------------------------------------
 
@@ -39,7 +40,7 @@ db.once("open", function() {
 
 // Main "/" Route. This will redirect the user to our rendered React application
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/public/index.html");
+  res.send("wassup baby biiiiird");
 });
 
 // This is the route we will send GET requests to retrieve our most recent search data.
